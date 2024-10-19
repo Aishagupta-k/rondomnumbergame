@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f8ff;
+        font-family: Arial, sans-serif;
+    }
+
+    .wapper {
+        text-align: center;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        background-color: #9be4d5;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        color: #555;
+    }
+
+    label {
+        font-weight: bold;
+        margin-right: 10px;
+
+    }
+
+    .guessfield {
+        padding: 10px;
+        font-size: 1em;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid #333;
+        border-radius: 4px;
+        margin-bottom: 24px;
+        width: 235px;
+        margin-left: 160px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .guess {
+        font-size: 30px;
+    }
+
+    .submitfield {
+        color: white;
+        border: none;
+
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    .submitfield:hover {
+        background-color: #0056b3;
+    }
+
+    .resultfield {
+        margin-top: 20px;
+        font-size: 1em;
+        color: #333;
+    }
+
+    .lastresult {
+        font-weight: bold;
+    }
+</style>
+
+<body>
+
+    <div class="wapper">
+        <h1>try and guess random number beetween 1 to 100</h1>
+        <h2>you have 10 attempt to guess number</h2>
+
+        <br />
+        <form>
+            <label for="guessfield" class="guess">Guess a number</label>
+            <input type="text" class="guessfield">
+            <input type="submit" id="submit" value="submit guess" class="submitfield">
+        </form>
+        <div class="resultfield">
+            <p>previous guess <span class="guesslist"></span></p>
+            <p>guesses remain <span class="lastresult">10</span></p>
+            <p class="lowerhi"></p>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
